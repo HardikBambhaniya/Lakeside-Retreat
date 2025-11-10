@@ -60,8 +60,8 @@ const CardsAnimation = () => {
           stagger: 0.09, 
           scrollTrigger: {
             trigger: introTextRefs.current[0].parentNode,
-            start: "top 30%",
-            end: "top 5%",
+            start: "top 50%",
+            end: "top 20%",
             scrub: true,
           },
         });
@@ -263,7 +263,7 @@ if (statsRefs.current) {
             {/* Card Wrapper */}
             <div className="card-wrapper relative w-full h-full will-change-transform">
               {/* Image/Video */}
-              <div className="absolute inset-0 overflow-hidden">
+              <div className="absolute inset-0 overflow-hidden rounded-xl">
                 {card.img && (
                   <img
                     src={card.img}
@@ -296,7 +296,7 @@ if (statsRefs.current) {
                 </h2>
                 <p
                   ref={(el) => (descRefs.current[i] = el)}
-                  className="text-lg sm:text-xl md:text-2xl lg:text-3xl max-w-4xl text-white/95 drop-shadow-xl leading-relaxed"
+                  className="text-lg sm:text-xl md:text-2xl lg:text-3xl max-w-4xl text-gray-200 drop-shadow-xl leading-relaxed"
                 >
                   {card.description}
                 </p>

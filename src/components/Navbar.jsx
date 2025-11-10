@@ -1,6 +1,6 @@
 // Navbar.jsx
-import { useState, useRef, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { useState, useRef, useEffect, use } from "react";
+import { TextAlignEnd, X } from "lucide-react";
 import gsap from "gsap";
 
 const Navbar = () => {
@@ -61,7 +61,7 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 w-screen z-50">
       <div className="flex justify-between items-center px-6 py-4 font-[solare]">
-        <h1 className="text-lg leading-4.5 text-white">
+        <h1 className="text-lg leading-4.5 text-gray-100 font-bold">
           Lakeside <br />
           Retreat
         </h1>
@@ -76,11 +76,11 @@ const Navbar = () => {
 
         {/* Hamburger Menu */}
         <button
-          className="z-50 text-2xl cursor-pointer text-white"
+          className="z-50 text-2xl cursor-pointer text-gray-200"
           onClick={toggleMenu}
           aria-label="Toggle menu"
         >
-          {open ? <X size={28} color="black" /> : <Menu size={28} />}
+          {open ? <X size={28} color="black" /> : <TextAlignEnd size={28} />}
         </button>
       </div>
 
@@ -93,7 +93,7 @@ const Navbar = () => {
           <div
             key={i}
             ref={(el) => (linkRefs.current[i] = el)}
-            className=" cursor-pointer hover:text-green-500 pl-5"
+            className=" cursor-pointer hover:text-sky-900 pl-5"
           >
             {link}
           </div>
