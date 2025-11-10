@@ -41,10 +41,10 @@ const Testimonials = () => {
       const next = (current + 1) % cards.length;
 
       gsap.to(cards[current], { yPercent: -100, duration: 0.8, ease: "power2.inOut" });
-      gsap.fromTo(cards[next], { yPercent: 100 }, { yPercent: 0, duration: 0.8, ease: "power2.inOut" });
+      gsap.fromTo(cards[next], { yPercent: 100 }, { yPercent: 0, duration: 0.8, ease: "power3.inOut" });
 
       setCurrent(next);
-    }, 5000); // change slide every 3.5s
+    }, 5000);
 
     return () => clearInterval(interval);
   }, [current]);
@@ -58,8 +58,8 @@ const Testimonials = () => {
             ref={(el) => (cardsRef.current[i] = el)}
             className="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center text-center p-6 backdrop-blur-lg rounded-2xl shadow-lg text-white"
           >
-            <p className="font-gilda text-lg sm:text-xl md:text-2xl mb-4 italic">"{r.quote}"</p>
-            <h4 className="font-[solare] text-gray-200 font-semibold text-lg sm:text-xl">{r.name}</h4>
+            <p className="font-gilda text-gray-400 text-lg sm:text-xl md:text-2xl mb-4 italic">"{r.quote}"</p>
+            <h4 className="font-[solare] font-semibold text-lg sm:text-xl">{r.name}</h4>
           </div>
         ))}
       </div>
