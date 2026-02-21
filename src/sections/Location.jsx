@@ -5,7 +5,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import cardOne from "../assets/imgCard.jpg";
 import cardTwo from "../assets/imgCard2.jpg";
 import cardThree from "../assets/imgCard3.png";
-import bgVideo from "../assets/bg-vid/bgVid.mp4";
+import bgVideo from "../assets/bg-vid/location.mp4";
 
 gsap.registerPlugin(ScrollTrigger);
 
