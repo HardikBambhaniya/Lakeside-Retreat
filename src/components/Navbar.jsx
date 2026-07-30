@@ -76,7 +76,7 @@ const Navbar = () => {
 
         {/* Hamburger Menu */}
         <button
-          className="z-50 text-2xl cursor-pointer text-gray-200"
+          className="z-50 text-2xl cursor-pointer text-black"
           onClick={toggleMenu}
           aria-label="Toggle menu"
         >
